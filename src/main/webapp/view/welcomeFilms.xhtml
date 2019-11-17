@@ -8,18 +8,17 @@
 
 <ui:composition template="/WEB-INF/template/mainTemplate.xhtml">
     <ui:define name="content">
-        <h1>The Sparta Training Application</h1>
+        <h1>Team3 Films Application</h1>
         <p/>
-        <h2>Welcome</h2>
         <h:form>
-            <h:outputLabel value="Welcome to Team3 search" />
+            <h:outputLabel value="Choose an actor to search:" />
             <p/>
             <h:selectOneRadio value="#{welcome.path}" layout="pageDirection">
                 <f:selectItem itemLabel="Actor" itemValue="1"/>
                 <f:selectItem itemLabel="Film" itemValue="2"/>
             </h:selectOneRadio>
             <p class="search">
-                <label>Search Actor/Film</label>
+                <label>Actor/Film Search</label>
                 <input name="search" type="text" class="txt" />
             </p>
             <p/>
