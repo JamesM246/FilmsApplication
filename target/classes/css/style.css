@@ -1,0 +1,25 @@
+@IMPORT url("#{resource['css:content.css']}");
+@IMPORT url("#{resource['css:header.css']}");
+@IMPORT url("#{resource['css:footer.css']}");
+@IMPORT url("#{resource['css:grid.css']}");
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+	margin: 0px;
+}
+
+body {
+	margin: 0px;
+	font-family: Verdana, sans-serif;
+	color: gray;
+	background: lightgray;
+}
+
+.content .container {
+	height: 100%;
+}
+

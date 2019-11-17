@@ -1,0 +1,17 @@
+.content {
+    padding: 311px 30px 30px 30px;
+    background: #ffffff;
+}
+
+.content h1 {
+    padding: 10px;
+}
+
+.content form {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.content #registerFields{
+     display : grid;
+}
