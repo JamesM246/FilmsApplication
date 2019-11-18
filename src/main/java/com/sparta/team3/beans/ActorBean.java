@@ -19,12 +19,12 @@ public class ActorBean {
         return actor;
     }
 
-    private String displayFilms(){
-        return filmService.displayAllFilms();
+    private String displayActors(){
+        return filmService.displayAllActors();
     }
 
     private String displayFilmsByActor(){
-        return filmService.displayActorsFilms(actor);
+        return filmService.displayActorFilms(actor);
     }
 
 

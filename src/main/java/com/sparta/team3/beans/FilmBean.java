@@ -24,7 +24,7 @@ public class FilmBean {
     }
 
     private String displaySelectFilms(){
-        return filmService.displaySelectFilms(); // arrayList of type Film
+        return filmService.displaySelectFilms();
     }
 
 
