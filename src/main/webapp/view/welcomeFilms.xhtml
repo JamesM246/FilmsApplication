@@ -11,18 +11,18 @@
         <h1>Team3 Films Application</h1>
         <p/>
         <h:form>
-            <h:outputLabel value="Choose an actor to search:" />
+            <h:outputLabel value="Choose a list to search:" />
             <p/>
-            <h:selectOneRadio value="#{welcome.path}" layout="pageDirection">
-                <f:selectItem itemLabel="Actor" itemValue="1"/>
-                <f:selectItem itemLabel="Film" itemValue="2"/>
+            <h:selectOneRadio value="#{welcomeFilms.radioOption}" layout="pageDirection">
+                <f:selectItem itemLabel="Actors" itemValue="1"/>
+                <f:selectItem itemLabel="Films" itemValue="2"/>
             </h:selectOneRadio>
             <p class="search">
                 <label>Actor/Film Search</label>
                 <input name="search" type="text" class="txt" />
             </p>
             <p/>
-            <h:commandButton value="Enter" action="#{welcome.nextScreen}"/>
+            <h:commandButton value="Enter" action="#{welcomeFilms.getList}"/>
         </h:form>
     </ui:define>
 </ui:composition>

@@ -11,10 +11,6 @@ public class Film {
     private int filmId;
     @Column(name = "title")
     private int filmTitle;
-    @Column(name = "description")
-    private int filmDescription;
-    @Column(name = "release")
-    private int filmReleaseYear;
 
     public int getFilmId() {
         return filmId;
@@ -32,19 +28,4 @@ public class Film {
         this.filmTitle = filmTitle;
     }
 
-    public int getFilmDescription() {
-        return filmDescription;
-    }
-
-    public void setFilmDescription(int filmDescription) {
-        this.filmDescription = filmDescription;
-    }
-
-    public int getFilmReleaseYear() {
-        return filmReleaseYear;
-    }
-
-    public void setFilmReleaseYear(int filmReleaseYear) {
-        this.filmReleaseYear = filmReleaseYear;
-    }
 }

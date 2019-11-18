@@ -24,7 +24,3 @@ public class FilmBean {
     }
 }
 
-//1List all actors - and show films that the selected actor has been inq
-//        2List all filsm
-//        3
-//        4
