@@ -1,0 +1,44 @@
+.menu {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	padding: 10px 10px;
+	text-align: center;
+	background-color: #345676;
+}
+
+.menu ul {
+	text-align: center;
+	padding: 0px;
+	margin:0px	
+}
+
+.menu li { 
+	display: inline-block;
+	padding: 0px 10px;
+	text-decoration:none;
+}
+
+.menu a {
+	text-decoration:none;
+	color: #000000;
+	margin: 0px 20px;
+}
+ 
+.menu a:active {
+	color: #33ff33;
+}
+
+.menu a:visited {
+	color: #000000;
+}
+
+.menu a:hover {
+	color: #ffffff;
+}
+
+.menu .current-page a {
+	color: #000000;
+	border-bottom: none;
+}
