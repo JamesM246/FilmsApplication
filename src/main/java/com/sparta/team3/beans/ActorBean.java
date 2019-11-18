@@ -15,6 +15,7 @@ public class ActorBean {
     private DAO dao;
 
     public List<Object> displayActors(String userInput){
+
         if (userInput == null) {
             return dao.getActors();
         } else {
