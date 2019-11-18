@@ -1,6 +1,7 @@
 package com.sparta.team3.beans;
 
 import com.sparta.team3.components.Actor;
+import com.sparta.team3.databaseManipulation.DAO;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -19,7 +20,7 @@ public class ActorBean {
         if (userInput == null) {
             return dao.getActors();
         } else {
-            return dao.getActorsByFilm(userInput);
+            return dao.getActorsByFilm();
         }
     }
 }
