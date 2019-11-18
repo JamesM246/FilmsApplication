@@ -21,6 +21,4 @@ public class Welcome {
         return (path.equals("1")) ? "register" : "login";
     }
 
-
-
 }
