@@ -1,5 +1,8 @@
 package com.sparta.team3.services;
 
+import com.sparta.team3.beans.ActorBean;
+import com.sparta.team3.beans.FilmBean;
+
 import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,22 +14,16 @@ public class WelcomeFilms {
     @Inject
     private FilmBean filmBean;
 
+    private List<Object> objectList;
     private String radioOption;
     private String userInput;
 
-    private String getList(){
+
+    protected String getList(){
         if(radioOption.equals("1")) {
-            if (userInput == null) {
-                return actorBean.displayActors();
-            } else {
-                return actorBean.displaySelectActors(userInput);
-            }
+            objectList = actorBean.displayActors(userInput);
         }else {
-            if (userInput == null) {
-                return filmBean.displayFilms();
-            } else {
-                return filmBean.displaySelectFilms(userInput);
-            }
+            objectList = filmBean.displayFilms(userInput);
         }
     }
 }

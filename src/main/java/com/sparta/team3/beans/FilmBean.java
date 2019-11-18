@@ -5,36 +5,22 @@ import com.sparta.team3.components.Film;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.util.List;
 
 @Named
 @RequestScoped
 public class FilmBean {
 
     @Inject
-    private FilmService filmService;
+    private DAO dao;
 
-    private Film film = new Film();
+    public List<Object> displayFilms(String userInput){
 
-    private Film getFilm(){
-        return film;
+        if (userInput == null) {
+            return dao.getFilms();
+        } else {
+            return dao.getFilmsByActors(userInput);
+        }
     }
-
-    private String displayFilms(){
-        return filmService.displayAllFilms();
-    }
-
-    private String displaySelectFilms(){
-        return filmService.displaySelectFilms();
-    }
-
-
-
-
-
 }
 
-
-//1List all actors - and show films that the selected actor has been inq
-//        2List all filsm
-//        3
-//        4
