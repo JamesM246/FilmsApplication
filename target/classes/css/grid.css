@@ -1,0 +1,36 @@
+@CHARSET "UTF-8";
+
+.content {
+	grid-area: content;
+}
+.footer {
+	grid-area: footer;
+}
+
+.header{
+	grid-area: header;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+			"logo headerTitle";
+}
+
+.logo {
+	grid-area: logo;
+}
+
+.headerTitle {
+	grid-area: headerTitle;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+			"header header header"
+			". content ."
+			". footer .";
+}
+
