@@ -1,11 +1,10 @@
 package com.sparta.team3.components;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
+@Table(name = "actor")
 public class Actor {
 
     @Id
@@ -39,4 +38,19 @@ public class Actor {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    @ManyToMany(mappedBy = "films")
+    private List<Actor> actors;
+
+
+
+}
+
+
+
+
+
+
+
+
 }

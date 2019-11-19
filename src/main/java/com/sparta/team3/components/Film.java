@@ -1,10 +1,10 @@
 package com.sparta.team3.components;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
+@Table(name = "film")
 public class Film {
     @Id
     @Column(name = "film_id")
@@ -28,4 +28,11 @@ public class Film {
         this.filmTitle = filmTitle;
     }
 
+    @ManyToMany
+    @JoinTable(
+            name = "film_actor",
+            joinColumns = @JoinColumn(name = "actor_id"),
+            inverseForeignKey = @JoinColumn(name = "film_id")
+    )
+    private List<Film> films;
 }
