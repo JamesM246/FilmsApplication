@@ -7,18 +7,30 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <h:body>
-    <ui:component template ="/WEB-INF/template/mainTemplate.xhtml">
+    <ui:component template="/WEB-INF/template/mainTemplate.xhtml">
         <ui:define name="content">
-            <h1>The Webb App - List Actors</h1>
-            <h:form>
-                <h:outputLabel value="Please Select the actor by name" />
-                <h:inputText name="Search" value="search here" /> <br/>
-                <h:dataTable>
-                    <ui:repeat id ="items" value="#{ActorBean.items}" var="item">
-                        <h:outputText id = "item" value = "#{item.value}" />
-                    </ui:repeat>
-                </h:dataTable>
-            </h:form>
+            <h1>List of Actors</h1>
+            <h:dataTable value="welcomeFilms.getList" var="wf"
+                         styleClass="order-table"
+                         headerClass="order-table-header"
+                         rowClasses="order-table-odd-row,order-table-even-row">
+
+                <h:column>
+                    <f:facet name="header">Actor ID</f:facet>
+                    #{wf.actorId}
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">First name</f:facet>
+                    #{wf.firstName}
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Surname</f:facet>
+                    #{wf.surname}
+                </h:column>
+
+            </h:dataTable>
         </ui:define>
     </ui:component>
 </h:body>
