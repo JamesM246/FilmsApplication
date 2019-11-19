@@ -1,5 +1,6 @@
 package com.sparta.team3.beans;
 
+import com.sparta.team3.components.Actor;
 import com.sparta.team3.components.Film;
 import com.sparta.team3.databaseManipulation.DAO;
 
@@ -15,13 +16,19 @@ public class FilmBean {
     @Inject
     private DAO dao;
 
-    public List<Object> displayFilms(String userInput){
+    private Film film = new Film();
 
-        if (userInput == null) {
-            return dao.getFilms();
-        } else {
-            return dao.getFilmsByActor();
-        }
+    public Film getActor(){
+        return film;
     }
+
+    private String displayFilms(){
+
+    }
+
+    private String displayFilmsByActor(){
+
+    }
+
 }
 
