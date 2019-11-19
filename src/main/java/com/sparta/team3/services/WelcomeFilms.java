@@ -4,11 +4,8 @@ import com.sparta.team3.beans.ActorBean;
 import com.sparta.team3.beans.FilmBean;
 
 import javax.ejb.Stateless;
-import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 @Stateless

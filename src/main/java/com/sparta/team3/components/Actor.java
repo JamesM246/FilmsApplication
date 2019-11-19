@@ -3,6 +3,7 @@ package com.sparta.team3.components;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Actor {
