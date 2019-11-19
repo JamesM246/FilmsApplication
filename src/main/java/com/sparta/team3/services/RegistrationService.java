@@ -16,6 +16,6 @@ public class RegistrationService {
 
     public String registerUser(User user) {
         entityManager.persist(user);
-        return "welcome";
+        return "welcomeFilms";
     }
 }
