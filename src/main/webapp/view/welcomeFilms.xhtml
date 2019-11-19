@@ -19,10 +19,10 @@
             </h:selectOneRadio>
             <p class="search">
                 <label>Actor/Film Search</label>
-                <input name="search" type="text" class="txt" id="getIdQuery" />
+                <h:inputText value="#{welcomeFilms.userInput}"/>
             </p>
             <p/>
-            <h:commandButton value="Enter" action="#{welcomeFilms.getObjectList}"/>
+            <h:commandButton value="Enter" action="#{welcomeFilms.getList}"/>
         </h:form>
     </ui:define>
 </ui:composition>
