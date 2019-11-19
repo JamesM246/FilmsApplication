@@ -27,4 +27,7 @@ public class Film {
     public void setFilmTitle(int filmTitle) {
         this.filmTitle = filmTitle;
     }
+
+//    @ManyToMany(mappedBy = "films")
+//    private List<Actor> actors;
 }
