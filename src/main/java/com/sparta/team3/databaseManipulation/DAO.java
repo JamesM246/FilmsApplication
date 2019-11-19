@@ -21,22 +21,20 @@ public class DAO {
 
     Actor actor = new Actor();
 
-    private final String input = request.getParameter("getIdQuery");
 
+    private String getActors = "SELECT actor_id, first_name, last_name FROM actor";
 
-    private String getActors = "SELECT first_name, last_name FROM actor";
-    private String getFilms = "SELECT first_name, last_name FROM film";
+    private String getFilms = "SELECT film_id, title FROM film";
 
+    private String filmByActor = "SELECT film_id, film.title FROM film_actor " +
+            "JOIN actor ON film_actor.actor_id = actor.actor_id " +
+            "JOIN film on film_actor.film_id = film.film_id " +
+            "WHERE actor.actor_id = ";
 
-    private String filmByActor = "SELECT film.title FROM film_actor \n" +
-            "JOIN actor ON film_actor.actor_id = actor.actor_id \n" +
-            "JOIN film on film_actor.film_id = film.film_id \n" +
-            "WHERE actor.actor_id = "+ input;
-
-    private String actorsByFilm = "SELECT first_name, last_name FROM film_actor \n" +
-            "JOIN actor ON film_actor.actor_id = actor.actor_id \n" +
-            "JOIN film on film_actor.film_id = film.film_id \n" +
-            "WHERE film.film_id = " + input;
+    private String actorsByFilm = "SELECT actor_id, first_name, last_name FROM film_actor " +
+            "JOIN actor ON film_actor.actor_id = actor.actor_id " +
+            "JOIN film on film_actor.film_id = film.film_id " +
+            "WHERE film.film_id = ";
 
 
 
@@ -70,9 +68,9 @@ public class DAO {
 
 
 
-    public List getFilmsByActor() {
+    public List getFilmsByActor(String userInput) {
         try {
-            Query query = entityManager.createNativeQuery(filmByActor);
+            Query query = entityManager.createNativeQuery(filmByActor+ userInput);
             listFilmsByActor = (List<Film>) query.getResultList();
         } catch (NoResultException e) {
             e.printStackTrace();
@@ -83,9 +81,9 @@ public class DAO {
 
 
 
-    public List getActorsByFilm() {
+    public List getActorsByFilm(String userInput) {
         try {
-            Query query = entityManager.createNativeQuery(getFilms);
+            Query query = entityManager.createNativeQuery(getFilms+ userInput);
             listActorsByFilm = (List<Actor>) query.getResultList();
         } catch (NoResultException e) {
             e.printStackTrace();

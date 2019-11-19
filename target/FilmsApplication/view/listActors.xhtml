@@ -10,24 +10,24 @@
     <ui:component template="/WEB-INF/template/mainTemplate.xhtml">
         <ui:define name="content">
             <h1>List of Actors</h1>
-            <h:dataTable value="welcomeFilms.getList" var="wf"
+            <h:dataTable value="resultList.getListAsActor" var="list"
                          styleClass="order-table"
                          headerClass="order-table-header"
                          rowClasses="order-table-odd-row,order-table-even-row">
 
                 <h:column>
                     <f:facet name="header">Actor ID</f:facet>
-                    #{wf.actorId}
+                    #{list.actorId}
                 </h:column>
 
                 <h:column>
-                    <f:facet name="header">First name</f:facet>
-                    #{wf.firstName}
+                    <f:facet name="header">First Name</f:facet>
+                    #{list.firstName}
                 </h:column>
 
                 <h:column>
                     <f:facet name="header">Surname</f:facet>
-                    #{wf.surname}
+                    #{list.surname}
                 </h:column>
 
             </h:dataTable>

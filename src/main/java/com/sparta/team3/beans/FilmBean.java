@@ -20,7 +20,7 @@ public class FilmBean {
         if (userInput == null) {
             return dao.getFilms();
         } else {
-            return dao.getFilmsByActor();
+            return dao.getFilmsByActor(userInput);
         }
     }
 }

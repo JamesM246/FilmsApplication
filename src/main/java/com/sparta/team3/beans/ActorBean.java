@@ -20,7 +20,7 @@ public class ActorBean {
         if (userInput == null) {
             return dao.getActors();
         } else {
-            return dao.getActorsByFilm();
+            return dao.getActorsByFilm(userInput);
         }
     }
 }
