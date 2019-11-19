@@ -20,7 +20,7 @@ public class LoginService {
             Query query = entityManager.createQuery("SELECT u FROM User u WHERE u.username = :username");
             query.setParameter("username",user.getUsername());
             User checkUser = (User)query.getSingleResult();
-            if(user.getUsername().equals(checkUser.getUsername()) && user.getPassword().equals(checkUser.getPassword())) return "welcome";
+            if(user.getUsername().equals(checkUser.getUsername()) && user.getPassword().equals(checkUser.getPassword())) return "welcomeFilms";
             return "signIn";
         }catch(NoResultException e){
             return "signIn";

@@ -1,0 +1,23 @@
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    background-color: #ffffff;
+    border-style: solid;
+    border-color: #d91e4f;
+    border-width: 0px 0px 1px 0px;
+}
+
+.header h1 {
+    padding: 10px;
+    font-size: 50px;
+    color: #000000;
+    margin: 0px;
+    /*text-align: center;*/
+}
+
+.headerTitle {
+    text-align: right;
+}

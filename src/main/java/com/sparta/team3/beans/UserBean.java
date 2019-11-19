@@ -22,7 +22,9 @@ public class UserBean {
         return user;
     }
 
-    public String registerNewUser(){ return registrationService.registerUser(user); }
+    public String registerNewUser(){
+        return registrationService.registerUser(user);
+    }
 
     public String validateUser(){
         return loginService.validateUser(user);
