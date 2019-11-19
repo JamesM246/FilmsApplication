@@ -17,7 +17,7 @@ public class ActorBean {
 
     public List<Object> displayActors(String userInput){
 
-        if (userInput == null) {
+        if (userInput.equals("")) {
             return dao.getActors();
         } else {
             return dao.getActorsByFilm(userInput);
