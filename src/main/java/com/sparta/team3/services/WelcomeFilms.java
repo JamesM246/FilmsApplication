@@ -2,17 +2,16 @@ package com.sparta.team3.services;
 
 import com.sparta.team3.beans.ActorBean;
 import com.sparta.team3.beans.FilmBean;
+import com.sparta.team3.components.ResultList;
 
 import javax.ejb.Stateless;
-import javax.enterprise.context.SessionScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
-@Stateless
 @Named
+@RequestScoped
 public class WelcomeFilms {
 
     @Inject
@@ -48,13 +47,15 @@ public class WelcomeFilms {
         this.userInput = userInput;
     }
 
-    protected String getList() {
+    public String getList() {
+        ResultList resultList = new ResultList();
         if (radioOption.equals("1")) {
-            objectList = actorBean.displayActors(userInput);
+            resultList.setList(actorBean.displayActors(userInput));
             return "listActors";
         } else {
-            objectList = filmBean.displayFilms(userInput);
+            resultList.setList(filmBean.displayFilms(userInput));
             return "listFilms";
         }
     }
 }
+

@@ -1,10 +1,10 @@
 package com.sparta.team3.components;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
+@Table(name = "actor")
 public class Actor {
 
     @Id
@@ -38,4 +38,22 @@ public class Actor {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+//    @ManyToMany
+//    @JoinTable(
+//            name = "film_actor",
+//            joinColumns = @JoinColumn(name = "actor_id"),
+//            inverseForeignKey = @JoinColumn(name = "film_id"),
+//    )
+//    private List<Film> films;
+
 }
+
+
+
+
+
+
+
+
+

@@ -17,10 +17,10 @@ public class FilmBean {
 
     public List<Object> displayFilms(String userInput){
 
-        if (userInput == null) {
+        if (userInput.equals("")) {
             return dao.getFilms();
         } else {
-            return dao.getFilmsByActor();
+            return dao.getFilmsByActor(userInput);
         }
     }
 }

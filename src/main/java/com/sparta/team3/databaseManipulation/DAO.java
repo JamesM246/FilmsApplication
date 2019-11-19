@@ -2,14 +2,12 @@ package com.sparta.team3.databaseManipulation;
 
 import com.sparta.team3.components.Actor;
 import com.sparta.team3.components.Film;
-import com.sparta.team3.components.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.servlet.http.HttpServletRequest;
-import java.sql.*;
 import java.util.List;
 
 
@@ -19,26 +17,19 @@ public class DAO {
     EntityManager entityManager;
     HttpServletRequest request;
 
-    Actor actor = new Actor();
+    private String getActors = "SELECT actor_id, first_name, last_name FROM actor";
 
-    private final String input = request.getParameter("getIdQuery");
+    private String getFilms = "SELECT film_id, title FROM film";
 
+    private String filmByActor = "SELECT film.film_id, film.title FROM film_actor " +
+            "JOIN actor ON film_actor.actor_id = actor.actor_id " +
+            "JOIN film on film_actor.film_id = film.film_id " +
+            "WHERE actor.actor_id = ";
 
-    private String getActors = "SELECT first_name, last_name FROM actor";
-    private String getFilms = "SELECT first_name, last_name FROM film";
-
-
-    private String filmByActor = "SELECT film.title FROM film_actor \n" +
-            "JOIN actor ON film_actor.actor_id = actor.actor_id \n" +
-            "JOIN film on film_actor.film_id = film.film_id \n" +
-            "WHERE actor.actor_id = "+ input;
-
-    private String actorsByFilm = "SELECT first_name, last_name FROM film_actor \n" +
-            "JOIN actor ON film_actor.actor_id = actor.actor_id \n" +
-            "JOIN film on film_actor.film_id = film.film_id \n" +
-            "WHERE film.film_id = " + input;
-
-
+    private String actorsByFilm = "SELECT actor.actor_id, first_name, last_name FROM film_actor " +
+            "JOIN actor ON film_actor.actor_id = actor.actor_id " +
+            "JOIN film on film_actor.film_id = film.film_id " +
+            "WHERE film.film_id = ";
 
     private List<Actor> listOfActors;
     private List<Actor> listActorsByFilm;
@@ -68,11 +59,9 @@ public class DAO {
         return listOfFilms;
     }
 
-
-
-    public List getFilmsByActor() {
+    public List getFilmsByActor(String userInput) {
         try {
-            Query query = entityManager.createNativeQuery(filmByActor);
+            Query query = entityManager.createNativeQuery(filmByActor + userInput);
             listFilmsByActor = (List<Film>) query.getResultList();
         } catch (NoResultException e) {
             e.printStackTrace();
@@ -81,11 +70,9 @@ public class DAO {
         return listFilmsByActor;
     }
 
-
-
-    public List getActorsByFilm() {
+    public List getActorsByFilm(String userInput) {
         try {
-            Query query = entityManager.createNativeQuery(getFilms);
+            Query query = entityManager.createNativeQuery(actorsByFilm + userInput);
             listActorsByFilm = (List<Actor>) query.getResultList();
         } catch (NoResultException e) {
             e.printStackTrace();
@@ -93,6 +80,5 @@ public class DAO {
         }
         return listActorsByFilm;
     }
-
 
 }

@@ -1,0 +1,264 @@
+[33mcommit 0cb6b7a49cd92dc184800a0879e6953b0339e76e[m[33m ([m[1;36mHEAD -> [m[1;32mdev[m[33m)[m
+Merge: f22504e 1ac188a
+Author: James Mac <jamesmac9879@gmail.com>
+Date:   Tue Nov 19 13:50:35 2019 +0000
+
+    Merge branch 'dev' of https://github.com/JamesM246/FilmsApplication into dev
+
+[33mcommit 1ac188adde2152a64491a842b8ee39f86d1fe14f[m[33m ([m[1;31morigin/dev[m[33m)[m
+Author: James Maguire <james.maguire246@hotmail.co.uk>
+Date:   Tue Nov 19 13:50:08 2019 +0000
+
+    Complete integration, add ResultList class
+
+[33mcommit 45294aadeae32d4b776b13686392816fc2f9ba3f[m
+Author: Joshua Steele-Gomes <JSteele-Gomes@spartaglobal.com>
+Date:   Tue Nov 19 13:46:49 2019 +0000
+
+    test Directory Added
+
+[33mcommit 6a01bacee126c9b0f2ab0b7f92b1445d218e566e[m
+Author: Joshua Steele-Gomes <JSteele-Gomes@spartaglobal.com>
+Date:   Tue Nov 19 13:39:49 2019 +0000
+
+    updated ignore
+
+[33mcommit f22504e00707984c277c267a6fdf97ef3dfbca5f[m
+Merge: 6e92ed8 062d0b7
+Author: James Mac <jamesmac9879@gmail.com>
+Date:   Tue Nov 19 09:49:26 2019 +0000
+
+    Merge branch 'dev' of https://github.com/JamesM246/FilmsApplication into dev
+
+[33mcommit 062d0b7701418fa530b3cd1e706e24920cc244af[m
+Author: Joshua Steele-Gomes <JSteele-Gomes@spartaglobal.com>
+Date:   Tue Nov 19 09:48:57 2019 +0000
+
+     ignoring target in GITIGNORE
+
+[33mcommit 6e92ed84e17b2f0f0bf75d8b9481864cc33252e2[m
+Merge: 4418f58 8f87fc2
+Author: James Mac <jamesmac9879@gmail.com>
+Date:   Tue Nov 19 09:43:47 2019 +0000
+
+    Merge branch 'jamesMac' into dev
+    
+    # Conflicts:
+    #       target/FilmsApplication/view/welcomeFilms.xhtml
+
+[33mcommit 4418f5802cb0b3051921dec56bc4cfc66c38c4bd[m
+Author: James Maguire <james.maguire246@hotmail.co.uk>
+Date:   Tue Nov 19 09:41:45 2019 +0000
+
+    Beginning of integration
+
+[33mcommit 4250ebe9d507e16052b0f2c49566c378ff93325c[m
+Merge: 3a2e892 e1f1a77
+Author: James Maguire <james.maguire246@hotmail.co.uk>
+Date:   Tue Nov 19 09:41:25 2019 +0000
+
+    Merge remote-tracking branch 'origin/dev' into dev
+
+[33mcommit 3a2e89266aacf46a4520ada369ec05a8754113d5[m
+Author: James Maguire <james.maguire246@hotmail.co.uk>
+Date:   Tue Nov 19 09:41:04 2019 +0000
+
+    Beginning of integration
+
+[33mcommit 8f87fc2d83299ad61e97317e277e54408c75c3bb[m
+Author: James Mac <jamesmac9879@gmail.com>
+Date:   Tue Nov 19 09:10:52 2019 +0000
+
+    Merged changes
+
+[33mcommit b7e7cac2f6acd63a0b654e78a66b5a0a752fa635[m
+Merge: 3154f60 e1f1a77
+Author: James Mac <jamesmac9879@gmail.com>
+Date:   Tue Nov 19 09:10:05 2019 +0000
+
+    Merge branch 'dev' into jamesMac
+
+[33mcommit e1f1a77e165504fdb6364370db3fe410cdb07598[m
+Merge: 42f3a1b 9a12e75
+Author: JoshuaJSG <48629450+JoshuaJSG@users.noreply.github.com>
+Date:   Mon Nov 18 20:39:49 2019 +0000
+
+    Merge pull request #7 from JamesM246/Joshua
+    
+    ignore File Added
+
+[33mcommit 9a12e75003e576b2979eaa5696f4e9de02fe01f3[m
+Author: Joshua Steele-Gomes <JSteele-Gomes@spartaglobal.com>
+Date:   Mon Nov 18 20:27:01 2019 +0000
+
+    ignore File Added
+
+[33mcommit 3154f60b5564c2da75bcdf99cec66ac03cb84fa9[m
+Author: James Mac <jamesmac9879@gmail.com>
+Date:   Mon Nov 18 17:01:01 2019 +0000
+
+    Test
+
+[33mcommit 42f3a1baa619cf7757c5e90e8247000808cb929c[m
+Author: James Maguire <james.maguire246@hotmail.co.uk>
+Date:   Mon Nov 18 16:58:58 2019 +0000
+
+    Bean and films pages adjustments
+
+[33mcommit 7f88417a44fd978dbd99627789668a4ed2badaf8[m
+Merge: a9d58b8 a56828d
+Author: James Maguire <james.maguire246@hotmail.co.uk>
+Date:   Mon Nov 18 16:53:25 2019 +0000
+
+    Merge remote-tracking branch 'origin/dev' into dev
+
+[33mcommit a9d58b883594bd2a11c383dc9c25e36eaf3a232e[m
+Author: James Maguire <james.maguire246@hotmail.co.uk>
+Date:   Mon Nov 18 16:52:37 2019 +0000
+
+    Bean and films pages adjustments
+
+[33mcommit a56828d1b439bcfa52e942e521e02babc5461b2e[m
+Merge: 8390d72 7e8fb16
+Author: JoshuaJSG <48629450+JoshuaJSG@users.noreply.github.com>
+Date:   Mon Nov 18 16:51:17 2019 +0000
+
+    Merge pull request #6 from JamesM246/Joshua
+    
+    Joshua
+
+[33mcommit 7e8fb16af044b2781cf105fbb7bfb0315df48b65[m
+Merge: 0e1b6e6 8390d72
+Author: JoshuaJSG <48629450+JoshuaJSG@users.noreply.github.com>
+Date:   Mon Nov 18 16:51:06 2019 +0000
+
+    Merge branch 'dev' into Joshua
+
+[33mcommit e986a1f8898fb1e1156ed2dcf0d3a0a78e4bd282[m
+Merge: 8390d72 bcaefd5
+Author: James Maguire <james.maguire246@hotmail.co.uk>
+Date:   Mon Nov 18 16:50:56 2019 +0000
+
+    Merge branch 'dev-Jmaguire' into dev
+    
+    # Conflicts:
+    #       src/main/java/com/sparta/team3/beans/ActorBean.java
+    #       src/main/java/com/sparta/team3/beans/FilmBean.java
+
+[33mcommit bcaefd5d8f9f1e286aee11b65ae797c53639cdbb[m[33m ([m[1;31morigin/dev-Jmaguire[m[33m)[m
+Author: James Maguire <james.maguire246@hotmail.co.uk>
+Date:   Mon Nov 18 16:42:50 2019 +0000
+
+    Bean and films pages adjustments
+
+[33mcommit 0e1b6e60307c1131534cd3def242d6a1435d4ea7[m
+Author: Joshua Steele-Gomes <JSteele-Gomes@spartaglobal.com>
+Date:   Mon Nov 18 16:41:47 2019 +0000
+
+    DAO
+
+[33mcommit 8390d72d6ac03f288f062ee0be50e43b4b6f67b1[m
+Merge: ee4ce3f 5e29123
+Author: JMac98 <32912083+JMac98@users.noreply.github.com>
+Date:   Mon Nov 18 16:40:29 2019 +0000
+
+    Merge pull request #4 from JamesM246/jamesMac
+    
+    Added dataTable
+
+[33mcommit 5e2912329ba960025cb45494880d82a272c2822f[m
+Author: James Mac <jamesmac9879@gmail.com>
+Date:   Mon Nov 18 16:35:21 2019 +0000
+
+    Added dataTable
+
+[33mcommit 6e98ca3c6714e94363f6ca318ac70f5523527dfa[m
+Author: Joshua Steele-Gomes <JSteele-Gomes@spartaglobal.com>
+Date:   Mon Nov 18 16:23:17 2019 +0000
+
+    linking input to DAO
+
+[33mcommit ce5524ee4e2980828b151bde9083285715ec61fe[m
+Author: James Maguire <james.maguire246@hotmail.co.uk>
+Date:   Mon Nov 18 15:26:41 2019 +0000
+
+    WelcomeFilms functionality
+
+[33mcommit 53fb5fe72b81fec465c6e5b9f7d1afdb1b4bacbb[m
+Merge: 0156d24 ee4ce3f
+Author: James Maguire <james.maguire246@hotmail.co.uk>
+Date:   Mon Nov 18 13:50:15 2019 +0000
+
+    Merge branch 'dev' into dev-Jmaguire
+
+[33mcommit 0156d24e412d1be399d5a5bbb401bb8f043ff493[m
+Author: James Maguire <james.maguire246@hotmail.co.uk>
+Date:   Mon Nov 18 13:35:28 2019 +0000
+
+    Edited FilmService -> WelcomeFilms
+
+[33mcommit ed39cf8d46bca9659f4487029b9e7a5d1bf0d639[m
+Author: James Maguire <james.maguire246@hotmail.co.uk>
+Date:   Mon Nov 18 11:36:48 2019 +0000
+
+    Added FilmService
+
+[33mcommit ee4ce3f58d264e6530b1357a39bbef841ca4e1e5[m
+Merge: 411426d c6cac48
+Author: JMac98 <32912083+JMac98@users.noreply.github.com>
+Date:   Mon Nov 18 10:46:03 2019 +0000
+
+    Merge pull request #3 from JamesM246/Joshua
+    
+    Joshua
+
+[33mcommit 411426d5655cd4d7fa08badae081839b484659b4[m
+Merge: ae0f376 b23a3d4
+Author: JMac98 <32912083+JMac98@users.noreply.github.com>
+Date:   Mon Nov 18 10:19:55 2019 +0000
+
+    Merge pull request #2 from JamesM246/jamesMac
+    
+    James mac
+
+[33mcommit b23a3d4ba78dce7da80b9a09430d3be9ef7d4c44[m
+Author: James Mac <32912083+JMac98@users.noreply.github.com>
+Date:   Mon Nov 18 01:26:25 2019 +0000
+
+    Bean changes
+
+[33mcommit 55c061b482fc5552019acf3d2532bfd866249dce[m
+Author: James Mac <32912083+JMac98@users.noreply.github.com>
+Date:   Mon Nov 18 00:06:36 2019 +0000
+
+    Added Film and Actor beans
+
+[33mcommit cb67b7a209f094d30582df214088bac06d9ee341[m
+Author: James Mac <jamesmac9879@gmail.com>
+Date:   Sun Nov 17 21:38:43 2019 +0000
+
+    Test commit
+
+[33mcommit c6cac481f1e290af8eb9a799c24115aa54883705[m
+Author: Joshua Steele-Gomes <JSteele-Gomes@spartaglobal.com>
+Date:   Sun Nov 17 16:31:33 2019 +0000
+
+    Welcome page title/sub title
+
+[33mcommit c37e1b7f6255b496e315613ce771da4337cee1cc[m
+Author: Joshua Steele-Gomes <JSteele-Gomes@spartaglobal.com>
+Date:   Sun Nov 17 16:12:47 2019 +0000
+
+    basic welcomePage to search for films, CSS NEEDED
+
+[33mcommit ae0f37609679ec4b77199e3cee1e6a521b55bc8f[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: James Maguire <james.maguire246@hotmail.co.uk>
+Date:   Fri Nov 15 15:34:14 2019 +0000
+
+    Basic structure
+
+[33mcommit 2403f457dc44cec09d4b354b341bd17fcb26730a[m
+Author: James Maguire <james.maguire246@hotmail.co.uk>
+Date:   Fri Nov 15 14:07:09 2019 +0000
+
+    Initial commit
