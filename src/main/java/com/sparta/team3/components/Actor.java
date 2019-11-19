@@ -39,18 +39,21 @@ public class Actor {
         this.lastName = lastName;
     }
 
-    @ManyToMany(mappedBy = "films")
-    private List<Actor> actors;
-
-
-
-}
-
-
-
-
-
-
-
+    @ManyToMany
+    @JoinTable(
+            name = "film_actor",
+            joinColumns = @JoinColumn(name = "actor_id"),
+            inverseForeignKey = @JoinColumn(name = "film_id")
+    )
+    private List<Film> films;
 
 }
+
+
+
+
+
+
+
+
+
