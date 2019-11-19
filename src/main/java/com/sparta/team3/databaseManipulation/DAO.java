@@ -8,7 +8,6 @@ import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.servlet.http.HttpServletRequest;
-import java.sql.*;
 import java.util.List;
 
 
@@ -22,12 +21,12 @@ public class DAO {
 
     private String getFilms = "SELECT film_id, title FROM film";
 
-    private String filmByActor = "SELECT film_id, film.title FROM film_actor " +
+    private String filmByActor = "SELECT film.film_id, film.title FROM film_actor " +
             "JOIN actor ON film_actor.actor_id = actor.actor_id " +
             "JOIN film on film_actor.film_id = film.film_id " +
             "WHERE actor.actor_id = ";
 
-    private String actorsByFilm = "SELECT actor_id, first_name, last_name FROM film_actor " +
+    private String actorsByFilm = "SELECT actor.actor_id, first_name, last_name FROM film_actor " +
             "JOIN actor ON film_actor.actor_id = actor.actor_id " +
             "JOIN film on film_actor.film_id = film.film_id " +
             "WHERE film.film_id = ";
