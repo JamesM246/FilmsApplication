@@ -10,7 +10,7 @@
     <ui:component template="/WEB-INF/template/mainTemplate.xhtml">
         <ui:define name="content">
             <h1>List of Actors</h1>
-            <h:dataTable value="#{welcomeFilms.actors}" var="wf"
+            <h:dataTable value="#{actorBean.actor}" var="wf"
                          styleClass="order-table"
                          headerClass="order-table-header"
                          rowClasses="order-table-odd-row,order-table-even-row">

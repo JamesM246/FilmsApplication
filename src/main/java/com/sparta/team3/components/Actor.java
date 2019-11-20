@@ -14,6 +14,7 @@ import java.util.List;
                         "JOIN film on film_actor.film_id = film.film_id \n" +
                         "WHERE actor.actor_id = ?"),
 })
+
 public class Actor {
     @Id
     @Column(name = "actor_id")

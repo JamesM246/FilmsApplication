@@ -21,11 +21,11 @@ public class ActorBean {
         return actor;
     }
 
-    public List<Actor> displayActors(String userInput){
-        if (userInput == null) {
-            return welcomeFilms.getActors();
-        } else {
-            return welcomeFilms.getActorsByFilm();
-        }
-    }
+//    public List<Actor> displayActors(String userInput){
+//        if (userInput == null) {
+//            return welcomeFilms.getActors();
+//        } else {
+//            return welcomeFilms.getActorsByFilm();
+//        }
+//    }
 }
