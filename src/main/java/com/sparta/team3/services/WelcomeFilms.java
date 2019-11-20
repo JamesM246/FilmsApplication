@@ -23,9 +23,6 @@ public class WelcomeFilms {
     private String radioOption;
     private String userInput;
 
-    @Inject
-    private ResultList resultList;
-
     public void setObjectList(List<Object> objectList) {
         this.objectList = objectList;
     }
@@ -48,10 +45,10 @@ public class WelcomeFilms {
 
     public String getList() {
         if (radioOption.equals("1")) {
-            resultList.setList(actorBean.displayActors(userInput));
+            actorBean.displayActors(userInput);
             return "listActors";
         } else {
-            resultList.setList(filmBean.displayFilms(userInput));
+            filmBean.displayFilms(userInput);
             return "listFilms";
         }
     }
