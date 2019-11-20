@@ -1,6 +1,5 @@
 package com.sparta.team3.beans;
 
-import com.sparta.team3.components.Actor;
 import com.sparta.team3.databaseManipulation.DAO;
 
 import javax.enterprise.context.RequestScoped;
