@@ -1,57 +1,70 @@
 package com.sparta.team3.services;
 
-import com.sparta.team3.beans.ActorBean;
-import com.sparta.team3.beans.FilmBean;
+import com.sparta.team3.components.Actor;
+import com.sparta.team3.components.Film;
 
 import javax.ejb.Stateless;
-import javax.inject.Inject;
 import javax.inject.Named;
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import java.util.List;
 
 @Stateless
 @Named
 public class WelcomeFilms {
 
-    @Inject
-    private ActorBean actorBean;
-    @Inject
-    private FilmBean filmBean;
+    @PersistenceContext
+    private EntityManager entityManager;
 
-    private List<Object> objectList;
-    private String radioOption;
-    private String userInput;
+    private List<Actor> listOfActors;
+    private List<Actor> listActorsByFilm;
 
-    public List<Object> getObjectList() {
-        return objectList;
-    }
+    private List<Film> listFilmsByActor;
+    private List<Film> listOfFilms;
 
-    public void setObjectList(List<Object> objectList) {
-        this.objectList = objectList;
-    }
-
-    public String getRadioOption() {
-        return radioOption;
-    }
-
-    public void setRadioOption(String radioOption) {
-        this.radioOption = radioOption;
-    }
-
-    public String getUserInput() {
-        return userInput;
-    }
-
-    public void setUserInput(String userInput) {
-        this.userInput = userInput;
-    }
-
-    protected String getList() {
-        if (radioOption.equals("1")) {
-            objectList = actorBean.displayActors(userInput);
-            return "listActors";
-        } else {
-            objectList = filmBean.displayFilms(userInput);
-            return "listFilms";
+    public List getActors() {
+        try {
+            Query query = entityManager.createNativeQuery("Actor.findAllActors");
+            listOfActors = (List<Actor>) query.getResultList();
+        } catch (NoResultException e) {
+            e.printStackTrace();
+            e.getMessage();
         }
+        return listOfActors;
+    }
+
+    public List getFilms() {
+        try {
+            Query query = entityManager.createNativeQuery("Film.findAllFilms");
+            listOfFilms = (List<Film>) query.getResultList();
+        } catch (NoResultException e) {
+            e.printStackTrace();
+            e.getMessage();
+        }
+        return listOfFilms;
+    }
+
+    public List getFilmsByActor() {
+        try {
+            Query query = entityManager.createNativeQuery("Actor.findFilmsByActor");
+            listFilmsByActor = (List<Film>) query.getResultList();
+        } catch (NoResultException e) {
+            e.printStackTrace();
+            e.getMessage();
+        }
+        return listFilmsByActor;
+    }
+
+    public List getActorsByFilm() {
+        try {
+            Query query = entityManager.createNativeQuery("Actor.findActorByFilm");
+            listActorsByFilm = (List<Actor>) query.getResultList();
+        } catch (NoResultException e) {
+            e.printStackTrace();
+            e.getMessage();
+        }
+        return listActorsByFilm;
     }
 }

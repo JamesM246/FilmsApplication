@@ -6,16 +6,15 @@ import java.util.List;
 @Entity
 @Table(name = "actor")
 @NamedNativeQueries({
-        @NamedNativeQuery(name="Actor.findAllActors",
-                query="SELECT first_name, last_name FROM actor"),
-        @NamedNativeQuery(name="Actor.findFilmsByActor",
-                query="SELECT film.title FROM film_actor \n" +
+        @NamedNativeQuery(name = "Actor.findAllActors",
+                query = "SELECT first_name, last_name FROM actor"),
+        @NamedNativeQuery(name = "Actor.findFilmsByActor",
+                query = "SELECT film.title FROM film_actor \n" +
                         "JOIN actor ON film_actor.actor_id = actor.actor_id \n" +
                         "JOIN film on film_actor.film_id = film.film_id \n" +
                         "WHERE actor.actor_id = ?"),
 })
 public class Actor {
-
     @Id
     @Column(name = "actor_id")
     private String actorId;
@@ -52,7 +51,7 @@ public class Actor {
     @JoinTable(
             name = "film_actor",
             joinColumns = @JoinColumn(name = "actor_id"),
-            inverseForeignKey = @JoinColumn(name = "film_id")
+            inverseJoinColumns = @JoinColumn(name = "film_id")
     )
     private List<Film> films;
 
