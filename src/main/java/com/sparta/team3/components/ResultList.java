@@ -12,22 +12,12 @@ public class ResultList implements Serializable {
 
     private List<Object> list;
 
-    private List<Actor> testList = new ArrayList<>();
-
-    {
-        testList.add(new Actor("1","James","Maguire"));
-    }
-
-
     public List<Object> getList() {
         return list;
     }
 
-//    public List<Actor> getListAsActor() {
-//        return (List<Actor>) (Object) list;
-//    }
     public List<Actor> getListAsActor() {
-        return testList;
+        return (List<Actor>) (Object) list;
     }
 
     public List<Film> getListAsFilm() {

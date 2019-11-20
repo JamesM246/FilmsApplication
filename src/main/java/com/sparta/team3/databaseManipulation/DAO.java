@@ -45,6 +45,7 @@ public class DAO {
             e.printStackTrace();
             e.getMessage();
         }
+        System.out.println(listOfActors.get(0).getActorId());
         return listOfActors;
     }
 
