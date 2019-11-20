@@ -21,7 +21,7 @@ public class ActorBean {
         return actor;
     }
 
-    public List<Object> displayActors(String userInput){
+    public List<Actor> displayActors(String userInput){
         if (userInput == null) {
             return welcomeFilms.getActors();
         } else {

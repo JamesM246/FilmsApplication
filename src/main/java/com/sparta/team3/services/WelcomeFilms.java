@@ -24,7 +24,7 @@ public class WelcomeFilms {
     private List<Film> listFilmsByActor;
     private List<Film> listOfFilms;
 
-    public List getActors() {
+    public List<Actor> getActors() {
         try {
             Query query = entityManager.createNativeQuery("Actor.findAllActors");
             listOfActors = (List<Actor>) query.getResultList();
@@ -35,7 +35,7 @@ public class WelcomeFilms {
         return listOfActors;
     }
 
-    public List getFilms() {
+    public List<Film> getFilms() {
         try {
             Query query = entityManager.createNativeQuery("Film.findAllFilms");
             listOfFilms = (List<Film>) query.getResultList();
@@ -46,7 +46,7 @@ public class WelcomeFilms {
         return listOfFilms;
     }
 
-    public List getFilmsByActor() {
+    public List<Film> getFilmsByActor() {
         try {
             Query query = entityManager.createNativeQuery("Actor.findFilmsByActor");
             listFilmsByActor = (List<Film>) query.getResultList();
@@ -57,7 +57,7 @@ public class WelcomeFilms {
         return listFilmsByActor;
     }
 
-    public List getActorsByFilm() {
+    public List<Actor> getActorsByFilm() {
         try {
             Query query = entityManager.createNativeQuery("Actor.findActorByFilm");
             listActorsByFilm = (List<Actor>) query.getResultList();

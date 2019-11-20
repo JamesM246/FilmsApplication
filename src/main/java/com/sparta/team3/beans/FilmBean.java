@@ -21,7 +21,7 @@ public class FilmBean {
         return film;
     }
 
-    public List<Object> displayFilms(String userInput){
+    public List<Film> displayFilms(String userInput){
         if (userInput == null) {
             return welcomeFilms.getFilms();
         } else {
