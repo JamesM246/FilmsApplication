@@ -22,9 +22,8 @@ public class WelcomeFilms {
     private String radioOption;
     private String userInput;
 
-    public List<Object> getObjectList() {
-        return objectList;
-    }
+    @Inject
+    private ResultList resultList;
 
     public void setObjectList(List<Object> objectList) {
         this.objectList = objectList;
@@ -47,7 +46,6 @@ public class WelcomeFilms {
     }
 
     public String getList() {
-        ResultList resultList = new ResultList();
         if (radioOption.equals("1")) {
             resultList.setList(actorBean.displayActors(userInput));
             return "listActors";

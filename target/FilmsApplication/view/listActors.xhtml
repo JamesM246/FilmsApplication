@@ -10,7 +10,7 @@
     <ui:composition template="/WEB-INF/template/mainTemplate.xhtml">
         <ui:define name="content">
             <h1>List of Actors</h1>
-            <h:dataTable value="#{resultList.getListAsActor()}" var="actor"
+            <h:dataTable value="#{resultList.list}" var="actor"
                          styleClass="order-table"
                          headerClass="order-table-header"
                          rowClasses="order-table-odd-row,order-table-even-row">
@@ -26,8 +26,8 @@
                 </h:column>
 
                 <h:column>
-                    <f:facet name="header">Surname</f:facet>
-                    #{actor.surname}
+                    <f:facet name="header">Last Name</f:facet>
+                    #{actor.lastName}
                 </h:column>
 
             </h:dataTable>
