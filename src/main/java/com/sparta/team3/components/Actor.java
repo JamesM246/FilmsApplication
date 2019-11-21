@@ -3,7 +3,6 @@ package com.sparta.team3.components;
 import javax.inject.Named;
 import javax.persistence.*;
 
-@Named
 @Entity
 @Table(name = "actor")
 public class Actor {

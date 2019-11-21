@@ -2,7 +2,6 @@ package com.sparta.team3.services;
 
 import com.sparta.team3.beans.ActorBean;
 import com.sparta.team3.beans.FilmBean;
-import com.sparta.team3.components.ResultList;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;

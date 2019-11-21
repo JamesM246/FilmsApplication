@@ -29,7 +29,6 @@ public class FilmBean {
     }
 
     public void displayFilms(String userInput){
-
         if (userInput.equals("")) {
             filmList = filmService.getFilmAll();
         } else {

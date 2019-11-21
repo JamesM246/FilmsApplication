@@ -4,7 +4,6 @@ import javax.inject.Named;
 import javax.persistence.*;
 import java.util.List;
 
-@Named
 @Entity
 @Table(name = "film")
 @NamedQueries({
