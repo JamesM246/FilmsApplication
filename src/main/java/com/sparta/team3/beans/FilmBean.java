@@ -1,10 +1,14 @@
 package com.sparta.team3.beans;
 
+import com.sparta.team3.components.Film;
 import com.sparta.team3.databaseManipulation.DAO;
+import com.sparta.team3.services.FilmService;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Named
@@ -12,14 +16,24 @@ import java.util.List;
 public class FilmBean {
 
     @Inject
-    private DAO dao;
+    private FilmService filmService;
 
-    public List<Object> displayFilms(String userInput){
+    private List<Film> filmList;
+
+    public List<Film> getFilmList() {
+        return filmList;
+    }
+
+    public void setFilmList(List<Film> filmList) {
+        this.filmList = filmList;
+    }
+
+    public void displayFilms(String userInput){
 
         if (userInput.equals("")) {
-            return dao.getFilms();
+            filmList = filmService.getFilmAll();
         } else {
-            return dao.getFilmsByActor(userInput);
+            filmList = filmService.getFilmByActor(userInput);
         }
     }
 }
