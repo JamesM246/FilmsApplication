@@ -1,6 +1,8 @@
 package com.sparta.team3.beans;
 
-import com.sparta.team3.databaseManipulation.DAO;
+import com.sparta.team3.components.Actor;
+import com.sparta.team3.components.Film;
+import com.sparta.team3.services.FilmService;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -12,14 +14,23 @@ import java.util.List;
 public class ActorBean {
 
     @Inject
-    private DAO dao;
+    private FilmService filmService;
 
-    public List<Object> displayActors(String userInput){
+    private List<Actor> actorList;
 
+    public List<Actor> getFilmList() {
+        return actorList;
+    }
+
+    public void setFilmList(List<Film> filmList) {
+        this.actorList = actorList;
+    }
+
+    public void displayActors(String userInput){
         if (userInput.equals("")) {
-            return dao.getActors();
+            //actorList = filmService.getFilmAll();
         } else {
-            return dao.getActorsByFilm(userInput);
+            //actorList = filmService.getFilmByActor(userInput);
         }
     }
 }
