@@ -7,7 +7,7 @@ import java.util.List;
 @Entity
 @Table(name = "film")
 @NamedQueries({
-        @NamedQuery(name = "FilmAll", query = "SELECT f.filmId, f.filmTitle FROM Film f"),
+        @NamedQuery(name = "FilmAll", query = "SELECT f FROM Film f"),
         @NamedQuery(name = "FilmByActor", query = "SELECT f.filmId, f.filmTitle FROM Film f JOIN f.actors a WHERE a.actorId = :actorId")
 })
 
