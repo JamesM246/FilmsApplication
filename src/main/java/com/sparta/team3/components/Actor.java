@@ -2,10 +2,16 @@ package com.sparta.team3.components;
 
 import javax.inject.Named;
 import javax.persistence.*;
+import java.util.List;
 
 @Named
 @Entity
 @Table(name = "actor")
+@NamedQueries({
+        @NamedQuery(name = "getAll", query = "SELECT a.actorId, a.firstName, a.lastName FROM Actor a"),
+        @NamedQuery(name = "getActorsInFilm", query = "SELECT a.actorId, a.firstName, a.lastName FROM Actor a JOIN Film f WHERE f.filmId =: filmId")
+}
+)
 public class Actor {
 
     @Id
@@ -50,13 +56,14 @@ public class Actor {
         this.lastName = lastName;
     }
 
-//    @ManyToMany
-//    @JoinTable(
-//            name = "film_actor",
-//            joinColumns = @JoinColumn(name = "actor_id"),
-//            inverseForeignKey = @JoinColumn(name = "film_id"),
-//    )
-//    private List<Film> films;
+    @ManyToMany
+    @JoinTable(
+            name = "film_actor",
+            joinColumns = @JoinColumn(name = "actor_id"),
+            inverseJoinColumns = @JoinColumn(name = "film_id")
+    )
+//    @OneToMany
+    private List<Film> films;
 
 }
 
