@@ -1,6 +1,5 @@
 package com.sparta.team3.components;
 
-import javax.inject.Named;
 import javax.persistence.*;
 
 @Entity
@@ -15,15 +14,15 @@ public class Actor {
     @Column(name = "last_name")
     private String lastName;
 
-    public Actor(){
-
-    }
-
-    public Actor(String actorId, String firstName, String lastName){
-        this.actorId = actorId;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
+//    public Actor(){
+//
+//    }
+//
+//    public Actor(String actorId, String firstName, String lastName){
+//        this.actorId = actorId;
+//        this.firstName = firstName;
+//        this.lastName = lastName;
+//    }
 
     public String getActorId() {
         return actorId;

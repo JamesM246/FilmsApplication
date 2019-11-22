@@ -8,7 +8,7 @@ import java.util.List;
 @Table(name = "film")
 @NamedQueries({
         @NamedQuery(name = "FilmAll", query = "SELECT f FROM Film f"),
-        @NamedQuery(name = "FilmByActor", query = "SELECT f.filmId, f.filmTitle FROM Film f JOIN f.actors a WHERE a.actorId = :actorId")
+        @NamedQuery(name = "FilmByActor", query = "SELECT f FROM Film f")
 })
 
 public class Film {
@@ -18,8 +18,8 @@ public class Film {
     @Column(name = "title")
     private String filmTitle;
 
-    @ManyToMany(mappedBy = "films")
-    private List<Actor> actors;
+//    @ManyToMany(mappedBy = "films")
+//    private List<Actor> actors;
 
     public int getFilmId() {
         return filmId;
