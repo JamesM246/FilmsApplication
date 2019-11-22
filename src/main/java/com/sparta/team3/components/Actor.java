@@ -6,7 +6,6 @@ import javax.persistence.*;
 @Entity
 @Table(name = "actor")
 public class Actor {
-
     @Id
     @Column(name = "actor_id")
     private String actorId;

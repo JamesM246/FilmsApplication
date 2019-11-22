@@ -18,8 +18,8 @@ public class Film {
     @Column(name = "title")
     private String filmTitle;
 
-    @ManyToMany(mappedBy = "films")
-    private List<Actor> actors;
+//    @ManyToMany(mappedBy = "films")
+//    private List<Actor> actors;
 
     public int getFilmId() {
         return filmId;
