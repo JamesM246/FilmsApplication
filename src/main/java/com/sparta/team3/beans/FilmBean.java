@@ -1,7 +1,6 @@
 package com.sparta.team3.beans;
 
 import com.sparta.team3.components.Film;
-import com.sparta.team3.databaseManipulation.DAO;
 import com.sparta.team3.services.FilmService;
 
 import javax.enterprise.context.RequestScoped;
