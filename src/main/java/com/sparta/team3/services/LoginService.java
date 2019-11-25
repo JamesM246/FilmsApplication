@@ -12,6 +12,7 @@ import javax.persistence.Query;
 @Named
 @Stateless
 public class LoginService {
+
     @PersistenceContext
     private EntityManager entityManager;
 
