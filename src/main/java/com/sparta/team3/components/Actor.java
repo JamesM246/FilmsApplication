@@ -4,6 +4,12 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "actor")
+@NamedQueries({
+        @NamedQuery(name = "FilmAll", query = "SELECT f FROM Actor f"),
+        @NamedQuery(name = "FilmByActor", query = "SELECT f FROM Film f")
+
+        //SELECT f.filmId, f.filmTitle FROM Film f JOIN f.actors a WHERE a.actorId = :actorId
+})
 public class Actor {
     @Id
     @Column(name = "actor_id")

@@ -32,7 +32,7 @@ public class FilmService {
         List<Film> filmList = new ArrayList<>();
         try {
             Query query = entityManager.createNamedQuery("FilmByActor");
-            query.setParameter("actorId", userInput);
+            query.setParameter(1, userInput);
             filmList = query.getResultList();
         }catch(NoResultException e){
             e.printStackTrace();
