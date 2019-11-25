@@ -28,9 +28,9 @@ public class ActorBean {
 
     public void displayActors(String userInput){
         if (userInput.equals("")) {
-            //actorList = filmService.getFilmAll();
+            actorList = filmService.getAllActors();
         } else {
-            //actorList = filmService.getFilmByActor(userInput);
+            actorList = filmService.getActorByFilm(userInput);
         }
     }
 }

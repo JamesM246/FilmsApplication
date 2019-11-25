@@ -41,7 +41,7 @@ public class FilmService {
         return filmList;
     }
 
-    public List<Actor> getAllActors(String userInput){
+    public List<Actor> getAllActors(){
         List<Actor> actorList = new ArrayList<>();
         try{
             Query query = entityManager.createNamedQuery("AllActors");
@@ -52,15 +52,15 @@ public class FilmService {
         return actorList;
     }
 
-    public List<Film> getActorByFilm(String userInput){
-        List<Film> filmList = new ArrayList<>();
+    public List<Actor> getActorByFilm(String userInput){
+        List<Actor> actorList = new ArrayList<>();
         try {
             Query query = entityManager.createNativeQuery("ActorByFilm");
             query.setParameter(1, userInput);
-            filmList = query.getResultList();
+            actorList = query.getResultList();
         }catch(NoResultException e){
             e.printStackTrace();
         }
-        return filmList;
+        return actorList;
     }
 }
