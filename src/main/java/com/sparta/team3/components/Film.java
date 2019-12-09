@@ -8,7 +8,7 @@ import java.util.List;
 @Table(name = "film")
 
 @NamedQueries({
-        @NamedQuery(name = "FilmAll", query = "SELECT f FROM Film f")
+        @NamedQuery(name = "AllFilms", query = "SELECT f FROM Film f")
 })
 
 @NamedNativeQuery(name = "FilmByActor", query = "SELECT film.film_id, film.title FROM film JOIN film_actor ON film.film_id=film_actor.film_id WHERE film_actor.actor_id = ?")

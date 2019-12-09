@@ -5,11 +5,11 @@ import javax.persistence.*;
 @Entity
 @Table(name = "actor")
 @NamedQueries({
-        @NamedQuery(name = "FilmAll", query = "SELECT f FROM Actor f"),
-        @NamedQuery(name = "FilmByActor", query = "SELECT f FROM Film f")
-
-        //SELECT f.filmId, f.filmTitle FROM Film f JOIN f.actors a WHERE a.actorId = :actorId
+        @NamedQuery(name = "AllActors", query = "SELECT f FROM Actor f"),
 })
+
+@NamedNativeQuery(name = "ActorByFilm", query = "SELECT actor.actor_id, actor.first_name, actor.last_name FROM actor JOIN film_actor ON actor.actor_id=film_actor.actor_id WHERE film_actor.film_id = ?")
+
 public class Actor {
     @Id
     @Column(name = "actor_id")
