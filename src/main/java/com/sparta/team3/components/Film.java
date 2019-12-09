@@ -1,8 +1,6 @@
 package com.sparta.team3.components;
 
-import javax.inject.Named;
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "film")
